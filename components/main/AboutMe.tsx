@@ -10,9 +10,10 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-const HeroContent = () => {
+const AboutMe = () => {
   return (
     <motion.div
+      id="about-me"
       initial="hidden"
       animate="visible"
       className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
@@ -24,7 +25,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Rosarin Niyomsuntisuk Portfolio
+            About Me
           </h1>
         </motion.div>
 
@@ -36,25 +37,29 @@ const HeroContent = () => {
             
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              Cybercrime{" "}
+              Rosarin Niyomsuntisuk{" "}
             </span>
-            is the greatest threat to every company in the world.
+            
           </span>
         </motion.div>
 
-        <motion.p
+        <motion.div
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-lg text-white my-5 max-w-[600px]"
         >
-          I&apos;m a girl who is interested in cyber security. Check out my projects and skills.
-        </motion.p>
-        <motion.a
-          href="#about-me"
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+          a cybersecurity enthusiast driven by a passion for protecting digital landscapes. 
+          With a background in being a member of <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+              {" "}
+              ISAG (Information Security Advisory Group){" "}
+            </span>
+          at King Mongkut&apos;s Institute of Technology Ladkrabang, 
+          I specialize in Digital Forensic and thrive on participated in many CTF challenges.
+          I&apos;m dedicated to continuous learning, staying updated on the latest trends and technologies. 
+          Beyond my work, I enjoy playing HackTheBox that complement my understanding of cybersecurity.
+          Let&apos;s connect and explore the ever-evolving world of cybersecurity together!
+          
+          {/* I&apos;m a Computer Engineering Student at King Mongkut&apos;s Institute of Technology Ladkrabang. */}
+        </motion.div>
       </div>
 
       <motion.div
@@ -63,13 +68,13 @@ const HeroContent = () => {
       >
         <Image
           src="/mainIconsdark.svg"
-          alt="work icons"
+          alt="my image"
           height={650}
           width={650}
         />
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default HeroContent;
+export default AboutMe
