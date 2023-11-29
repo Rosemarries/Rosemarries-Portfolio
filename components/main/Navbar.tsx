@@ -1,6 +1,8 @@
 import { Socials } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { RxGithubLogo } from "react-icons/rx";
 
 const Navbar = () => {
   return (
@@ -18,7 +20,7 @@ const Navbar = () => {
             className="cursor-pointer hover:animate-slowspin"
           />
 
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
+          <span className="font-bold ml-[10px] hidden lg:block text-gray-300">
             Rosemarries
           </span>
         </a>
@@ -37,8 +39,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
+        <Link href="https://github.com/Rosemarries" passHref={true} className="flex flex-row gap-5 text-white">
+          <RxGithubLogo />
+          {/* {Socials.map((social) => (
             <Image
               src={social.src}
               alt={social.name}
@@ -46,8 +49,8 @@ const Navbar = () => {
               width={24}
               height={24}
             />
-          ))}
-        </div>
+          ))} */}
+        </Link>
       </div>
     </div>
   );

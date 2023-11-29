@@ -7,11 +7,12 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
+    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-50">
         <div className="w-full flex flex-col items-center justify-center m-auto">
             <div className="w-full h-full flex flex-row items-start justify-around flex-wrap">
                 
@@ -21,44 +22,44 @@ const Footer = () => {
                         <FaYoutube />
                         <span className="text-[15px] ml-[6px]">Youtube</span>    
                     </p> */}
-                    <a target="_blank" href="https://github.com/Rosemarries" className="flex flex-row items-center my-[15px] cursor-pointer">
+                    <Link target="_blank" href="https://github.com/Rosemarries" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
                         <RxGithubLogo />
                         <span className="text-[15px] ml-[6px]">Github</span>    
-                    </a>
-                    <a target="_blank" href="https://discordapp.com/users/676003041387872287" className="flex flex-row items-center my-[15px] cursor-pointer">
+                    </Link>
+                    <Link target="_blank" href="https://discordapp.com/users/676003041387872287" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
                         <RxDiscordLogo />
                         <span className="text-[15px] ml-[6px]">Discord</span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Social Media</div>
-                    <a target="_blank" href="https://github.com/Rosemarries" className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
+                    <Link target="_blank" href="https://www.instagram.com/rosemarr13s/" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <RxInstagramLogo />
                         <span className="text-[15px] ml-[6px]">Instagram</span>
-                    </a>
-                    {/* <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p> */}
-                    <a target="_blank" href="https://www.linkedin.com/in/rosarin-niyomsuntisuk-104382289" className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </a>
+                    </Link>
+                    <Link target="_blank" href="https://web.facebook.com/profile.php?id=100010951620919" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <FaFacebook />
+                        <span className="text-[15px] ml-[6px]">Facebook</span>
+                    </Link>
+                    <Link target="_blank" href="https://www.linkedin.com/in/rosarin-niyomsuntisuk-104382289" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
+                        <RxLinkedinLogo />
+                        <span className="text-[15px] ml-[6px]">Linkedin</span>
+                    </Link>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">About</div>
-                   <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    {/* <p className="flex flex-row items-center my-[15px] cursor-pointer">
                      
                         <span className="text-[15px] ml-[6px]">Become Sponsor</span>    
-                    </p>
+                    </p> */}
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
                       
                         <span className="text-[15px] ml-[6px]">Learning about me</span>    
                     </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    <Link href="mailto:rosarinniyomsuntisuk@gmail.com" passHref={true} className="flex flex-row items-center my-[15px] cursor-pointer">
                   
                         <span className="text-[15px] ml-[6px]">rosarinniyomsuntisuk@gmail.com</span>    
-                    </p>
+                    </Link>
                 </div>
             </div>
 
